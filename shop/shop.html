@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Apparel</title>
+    <link rel="stylesheet" href="style_s.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/index.html"><img src="/images/logo.png" alt=""></a>
+        </div>
+        <div class="elements">
+            <ul>
+                <a class="nav__link" href="/index.html"><li>Home</li></a>
+                <a class="nav__link actives" href="/shop/shop.html"><li>Shop</li></a>
+                <a class="nav__link" href="/branches/branches.html"><li>Branches</li></a>
+                <a class="nav__link" href="/employee/employee.html"><li>Employees</li></a>
+            </ul>
+        </div>
+        <div class="nav-btns">
+            <div class="btn-group" >
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="signup">
+                  Sign up
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/login/login.html">Log in</a></li>
+                  <li><a class="dropdown-item" href="/signup/signup.html">Sign up</a></li>
+                </ul>
+              </div>
+        </div>
+    </nav>
+</body>
+<script>
+    const navLinkEls = document.querySelectorAll('.nav__link');
+  
+    navLinkEls.forEach(navLinkEl =>{
+      navLinkEl.addEventListener('click',() =>{
+        document.querySelector('.actives').classList.remove('actives');
+        navLinkEl.classList.add('actives');
+      })
+    })
+  </script>
+</html>
